@@ -1,0 +1,62 @@
+Step #1:
++ create 3 seperate containers and buttons
++ User selects home currency and destination country (developer assigns country to currency).
++ User enters home currency amount.
++ ajax calls currency API (currencyapi.net).
++ get converted amount of currency total in seperate container.
+
+Step #2:
++ create seperate container
++ ajax calls what user can purchase API (purchasingpowerparity).
+    - this calls whatever the user can purchase in that country compared to their home currency
+    - its not exact it just estimates.
+    - gives better idea of what it cost to live there.
+
+Step #3:
++ create how to page.
+    - A lot of CSS and HTML mainly
+
+
+1st Shift
++ CSS
+    - Talmage
+    - Trevor
++ JavaScript
+    - Ammon
+    - RC
++ HTML
+    - Dylan
+'''
+CSS and HTML creates Navbar and Footer
+create buttons and send information on ID's and classes for each button to JS team
+
+JavaScript plug in API's and make sure it all functions properly
+Crate event Listenters for all buttons.
+'''
+
+
+2nd Shift:
++ CSS
+    - Ammon
+    - Dylan
++ JavaScript
+    - Trevor
+    - Talmage
++ HTML
+- RC
+'''
+CSS and HTML creates containers and fonts for information page
+
+
+JavaScript plugs in 2nd and 3rd API into project.
+Creates event listeners for each button on page
+'''
+
+
+3rd Shift:
++ CSS
+    - Everyone
++ JavaScript
+    - Everyone
++ HTML
+    - Everyone
