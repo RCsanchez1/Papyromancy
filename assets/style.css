@@ -5,8 +5,13 @@
  *
  * Made By MaterializeCSS.com
  */
+ body {
+  background-color: #E9E3DB;
+ }
+
  .headerColor {
    background-color: #4A5539;
+   border-bottom: 3px solid #3a332a;
  }
 
  nav ul a,
@@ -53,6 +58,7 @@
  }
  .icon-block .material-icons {
    font-size: inherit;
+   color: #4A5539;
  }
  
  .headline-text {
@@ -67,8 +73,12 @@
  .link-text:hover {
   color: #a3a793;
  }
+ .company-text {
+  color: #3F372E;
+ }
 
- footer .page-footer {
+.page-footer {
+  border-top: 5px solid #3a332a;
   margin: 0;
  }
  
