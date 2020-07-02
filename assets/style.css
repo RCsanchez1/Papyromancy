@@ -5,10 +5,13 @@
  *
  * Made By MaterializeCSS.com
  */
+ .headerColor {
+   background-color: #4A5539;
+ }
 
  nav ul a,
  nav .brand-logo {
-   color: #444;
+   color: #E9E3DB;
  }
  
  p {
@@ -52,7 +55,20 @@
    font-size: inherit;
  }
  
- footer.page-footer {
-   margin: 0;
+ .headline-text {
+  color: #917D68;
+ }
+ .foot-text {
+  color: #E9E3DB;
+ }
+ .link-text {
+  color: #E9E3DB;
+ }
+ .link-text:hover {
+  color: #a3a793;
+ }
+
+ footer .page-footer {
+  margin: 0;
  }
  
