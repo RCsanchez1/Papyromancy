@@ -9,6 +9,11 @@
   background-color: #E9E3DB;
  }
 
+ .card-panel {
+  background-color: #4A5539;
+  border: 3px solid #3a332a;
+ }
+
  .headerColor {
    background-color: #4A5539;
    border-bottom: 3px solid #3a332a;
