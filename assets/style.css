@@ -9,9 +9,15 @@
   background-color: #E9E3DB;
  }
 
+ .s12 {
+  color: #3a332a;
+  text-align: center;
+ }
+
  .card-panel {
   background-color: #4A5539;
   border: 3px solid #3a332a;
+  color: #E9E3DB
  }
 
  .headerColor {
