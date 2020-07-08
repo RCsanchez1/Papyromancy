@@ -9,11 +9,11 @@ $(document).ready(function () {
 const API_URL = '';
 
 // RapidAPI request headers   
-const REQUEST_HEADERS = {
-  'X-RapidAPI-Host': ''
-  , 'X-RapidAPI-Key': '4a22645048860763a044'
-  , 'Content-Type': ''
-};
+//  const REQUEST_HEADERS = {
+//  'X-RapidAPI-Host': ''
+//  , 'X-RapidAPI-Key': ''
+//  , 'Content-Type': ''
+//  };
 
 const analyzeComment = (Currency, callback) => {
     // Creating an object to send to the server
