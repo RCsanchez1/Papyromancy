@@ -15,19 +15,21 @@ $(document).ready(function () {
             console.log(response);
         }
 
+        )
+});
 
 $("#convert").on("click", function () {
-            axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
-                .then((response) => {
-                    console.log(response);
+    axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
+        .then((response) => {
+            console.log(response);
 
-                    PPP = response.data.ppp.ppp;
-                    console.log(PPP);
+            PPP = response.data.ppp.ppp;
+            console.log(PPP);
 
-                    pppConversion = response.data.ppp.pppConversionFactor
-                    console.log(pppConversion);
-                }
+            pppConversion = response.data.ppp.pppConversionFactor
+            console.log(pppConversion);
+        }
 
-                )
-        })
+        )
+})
 
