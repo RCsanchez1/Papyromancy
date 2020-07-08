@@ -22,10 +22,10 @@ $("#convert").on("click", function () {
     if ( selectValue.children("option:selected").val() ==="CA") {
         currencyCode = "CAD";
     } 
-    else if (selectValue.children("option:selected".val() === "MX"){
+    else if (selectValue.children("option:selected".val() === "MX")) {
         currencyCode = "MXN"
-    })
-            
+    }
+          
     
     axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
                 .then((response) => {
@@ -41,4 +41,6 @@ $("#convert").on("click", function () {
 
                 )}
 )
+
+        
 
