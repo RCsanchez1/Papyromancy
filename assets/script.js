@@ -9,10 +9,7 @@ let pppConversion;
 $(document).ready(function () {
     $('select').formSelect();
 
-    axios.get("https://free.currconv.com/api/v7/convert?apiKey=" + apiKey2 + "&q=USD_PHP&compact=y")
-        .then((response) => {
-            console.log(response);
-        })
+    
 });
 
 
@@ -32,6 +29,8 @@ $("#convert").on("click", function () {
 
     console.log(currencyCode)
 
+    convertCurrency(currencyCode);
+    purchasePower();
 
     axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
         .then((response) => {
@@ -49,6 +48,9 @@ $("#convert").on("click", function () {
 }
 )
 
+function convertCurrency (currency) {
+
+}
         
 
 
