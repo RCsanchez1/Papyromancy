@@ -30,6 +30,8 @@ $("#convert").on("click", function () {
         currencyCode = "GBP"
     }
 
+    console.log(currencyCode)
+
 
     axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
         .then((response) => {
