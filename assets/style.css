@@ -7,8 +7,14 @@
  */
 body {
   background-color: #E9E3DB;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
+main {
+  flex: 1 0 auto;
+}
 .s12 {
   color: #3a332a;
   text-align: center;
