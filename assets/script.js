@@ -19,12 +19,16 @@ $(document).ready(function () {
 $("#convert").on("click", function () {
     let selectValue = $("select");
     let currencyCode;
-    if ( selectValue.children("option:selected").val() ==="CA") {
+    if (selectValue.children("option:selected").val() ==="CA") {
         currencyCode = "CAD";
     } 
-    else if (selectValue.children("option:selected".val() === "MX")) {
-        currencyCode = "MXN"
+    else if (selectValue.children("option:selected".val() === "MX") {
+        currencyCode = "MXN";
     }
+    else if (selectValue.children("option:selected").val() === "UK") {
+        currencyCode = "GBP";
+    }
+
           
     
     axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
