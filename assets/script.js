@@ -37,10 +37,10 @@ $("#convert").on("click", function () {
             console.log(response);
 
             PPP = response.data.ppp.ppp;
-            console.log(PPP);
+            
 
             pppConversion = response.data.ppp.pppConversionFactor
-            console.log(pppConversion);
+            
         }
 
 
