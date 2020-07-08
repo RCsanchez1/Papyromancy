@@ -25,6 +25,9 @@ $("#convert").on("click", function () {
     else if (selectValue.children("option:selected".val() === "MX")) {
         currencyCode = "MXN"
     }
+    else if (selectValue.children("option:selected".val() === "GBP")) {
+        currencyCode = "GBP"
+    }
 
 
     axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
