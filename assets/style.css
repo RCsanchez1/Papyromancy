@@ -5,91 +5,94 @@
  *
  * Made By MaterializeCSS.com
  */
- body {
+body {
   background-color: #E9E3DB;
- }
+}
 
- .s12 {
+.s12 {
   color: #3a332a;
   text-align: center;
- }
+}
 
- .card-panel {
+.card-panel {
   background-color: #4A5539;
   border: 3px solid #3a332a;
   color: #E9E3DB
- }
+}
 
- .headerColor {
-   background-color: #687554;
-   border-bottom: 3px solid #3a332a;
- }
+.headerColor {
+  background-color: #687554;
+  border-bottom: 3px solid #3a332a;
+}
 
- nav ul a,
- nav .brand-logo {
-   color: #E9E3DB;
- }
+nav, ul, a,
+nav {
+  color: #E9E3DB;
+}
  
- p {
-   line-height: 2rem;
- }
+p {
+  line-height: 2rem;
+}
  
- .sidenav-trigger {
-   color: #26a69a;
- }
+.sidenav-trigger {
+  color: #26a69a;
+}
  
- .parallax-container {
-   min-height: 380px;
-   line-height: 0;
-   height: auto;
-   color: rgba(255,255,255,.9);
- }
-   .parallax-container .section {
-     width: 100%;
-   }
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+.parallax-container, .section {
+    width: 100%;
+  }
  
  @media only screen and (max-width : 992px) {
-   .parallax-container .section {
-     position: absolute;
-     top: 40%;
-   }
-   #index-banner .section {
-     top: 10%;
-   }
- }
+.parallax-container, .section {
+    position: absolute;
+    top: 40%;
+}
+#index-banner, .section {
+    top: 10%;
+  }
+}
  
  @media only screen and (max-width : 600px) {
-   #index-banner .section {
-     top: 0;
-   }
- }
+#index-banner, .section {
+    top: 0;
+  }
+}
  
- .icon-block {
-   padding: 0 15px;
- }
- .icon-block .material-icons {
-   font-size: inherit;
-   color: #4A5539;
- }
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block, .material-icons {
+  font-size: inherit;
+  color: #4A5539;
+}
  
- .headline-text {
+.headline-text {
   color: #917D68;
- }
- .foot-text {
+}
+.foot-text {
   color: #E9E3DB;
- }
- .link-text {
+}
+.link-text {
   color: #E9E3DB;
- }
- .link-text:hover {
+}
+.link-text:hover {
   color: #a3a793;
- }
- .company-text {
+}
+.company-text {
   color: #3F372E;
- }
+}
 
 .page-footer {
   border-top: 5px solid #3a332a;
   margin: 0;
- }
+}
  
+#logo-container, .left, .brand-logo {
+  float: left;
+}
