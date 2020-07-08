@@ -20,10 +20,10 @@ $("#convert").on("click", function () {
     if (selectValue.children("option:selected").val() === "CA") {
         currencyCode = "CAD";
     }
-    else if (selectValue.children("option:selected".val() === "MX")) {
+    else if (selectValue.children("option:selected").val() === "MX") {
         currencyCode = "MXN"
     }
-    else if (selectValue.children("option:selected".val()==="UK")) {
+    else if (selectValue.children("option:selected").val()==="UK") {
         currencyCode = "GBP"
     }
 
