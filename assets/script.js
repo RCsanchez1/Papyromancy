@@ -30,7 +30,7 @@ $("#convert").on("click", function () {
     console.log(currencyCode)
 
     convertCurrency(currencyCode);
-    purchasePower();
+    // purchasePower();
 
     axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
         .then((response) => {
