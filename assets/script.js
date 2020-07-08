@@ -1,6 +1,6 @@
 
 const apiKey = '4a22645048860763a044';
-const apiKey2 ='00b641aadb7d3614e166';
+const apiKey2 = '00b641aadb7d3614e166';
 
 let PPP;
 let pppConversion;
@@ -15,8 +15,18 @@ $(document).ready(function () {
         })
 });
 
-<<<<<<< HEAD
+
 $("#convert").on("click", function () {
+    let selectValue = $("select");
+    let currencyCode;
+    if (selectValue.children("option:selected").val() === "CA") {
+        currencyCode = "CAD";
+    }
+    else if (selectValue.children("option:selected".val() === "MX")) {
+        currencyCode = "MXN"
+    }
+
+
     axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
         .then((response) => {
             console.log(response);
@@ -28,36 +38,10 @@ $("#convert").on("click", function () {
             console.log(pppConversion);
         }
 
+
         )
-})
-=======
-
-$("#convert").on("click", function () {
-    let selectValue = $("select");
-    let currencyCode;
-    if ( selectValue.children("option:selected").val() ==="CA") {
-        currencyCode = "CAD";
-    } 
-    else if (selectValue.children("option:selected".val() === "MX")) {
-        currencyCode = "MXN"
-    }
-          
-    
-    axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
-                .then((response) => {
-                    console.log(response);
-
-                    PPP = response.data.ppp.ppp;
-                    console.log(PPP);
-
-                    pppConversion = response.data.ppp.pppConversionFactor
-                    console.log(pppConversion);
-                }
-
-
-                )}
+}
 )
 
-        
->>>>>>> 89586a513cef55e8959b4c7642a56c451e7c053a
+
 
