@@ -15,6 +15,22 @@ $(document).ready(function () {
         })
 });
 
+<<<<<<< HEAD
+$("#convert").on("click", function () {
+    axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
+        .then((response) => {
+            console.log(response);
+
+            PPP = response.data.ppp.ppp;
+            console.log(PPP);
+
+            pppConversion = response.data.ppp.pppConversionFactor
+            console.log(pppConversion);
+        }
+
+        )
+})
+=======
 
 $("#convert").on("click", function () {
     let selectValue = $("select");
@@ -47,4 +63,5 @@ $("#convert").on("click", function () {
 )
 
         
+>>>>>>> 89586a513cef55e8959b4c7642a56c451e7c053a
 
