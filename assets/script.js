@@ -1,6 +1,6 @@
 
 const apiKey = '4a22645048860763a044';
-const apiKey2 ='00b641aadb7d3614e166';
+const apiKey2 = '00b641aadb7d3614e166';
 
 let PPP;
 let pppConversion;
@@ -19,32 +19,34 @@ $(document).ready(function () {
 $("#convert").on("click", function () {
     let selectValue = $("select");
     let currencyCode;
-    if (selectValue.children("option:selected").val() ==="CA") {
-        currencyCode = "CAD";
-    } 
-    else if (selectValue.children("option:selected".val() === "MX") {
-        currencyCode = "MXN";
-    } 
-    else (selectValue.children("option:selected".val() === "UK") {
-        currencyCode = "GBP";
-    } 
-})
-          
     
+    if (selectValue.children("option:selected").val() === "CA") {
+        currencyCode = "CAD";
+    }
+    else if (selectValue.children("option:selected".val() === "MX")) {
+        currencyCode = "MXN"
+    }
+    else if (selectValue.children("option:selected".val()==="UK")) {
+        currencyCode = "GBP"
+    }
+
+
     axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
-                .then((response) => {
-                    console.log(response);
+        .then((response) => {
+            console.log(response);
 
-                    PPP = response.data.ppp.ppp;
-                    console.log(PPP);
+            PPP = response.data.ppp.ppp;
+            console.log(PPP);
 
-                    pppConversion = response.data.ppp.pppConversionFactor
-                    console.log(pppConversion);
-                }
+            pppConversion = response.data.ppp.pppConversionFactor
+            console.log(pppConversion);
+        }
 
 
-                )}
+        )
+}
 )
 
         
+
 
