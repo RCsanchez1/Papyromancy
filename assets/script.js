@@ -49,7 +49,10 @@ $("#convert").on("click", function () {
 )
 
 function convertCurrency (currency) {
-
+    axios.get("https://free.currconv.com/api/v7/convert?apiKey=" + apiKey2 + "&q=USD_PHP&compact=y")
+    .then((response) => {
+        console.log(response);
+    })
 }
         
 
