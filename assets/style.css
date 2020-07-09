@@ -112,18 +112,22 @@ footer {
   float: left;
 }
 
-.convert {
+  /* .convert {
   display: block;
   background-color: white;
   color: black;
 
-}
-.convert:hover {
+} */
+/* .convert:hover {
   background-color: black;
-  color: white;
+  color: white; 
   
-}
+} */
 
 .btn {
   background-color: #a3a793 ;
+}
+
+.btn:hover {
+  background-color: #687554;
 }
