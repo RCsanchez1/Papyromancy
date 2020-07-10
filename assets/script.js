@@ -5,23 +5,25 @@ const apiKey2 = '00b641aadb7d3614e166';
 let PPP;
 let pppConversion;
 
-var cCardPanel = document.getElementById("cCardPanel");
-var pCardPanel = document.getElementById("pCardPanel")
+var cCardPanel = $("#cCardPanel");
+var pCardPanel = $("#pCardPanel")
 
 
 $(document).ready(function () {
     $('select').formSelect();
 
 });
-cCardPanel.style.visibility = "hidden";
-pCardPanel.style.visibility = "hidden";
+cCardPanel.hide()
+pCardPanel.hide()
 
 
 $("#convert").on("click", function () {
     let selectValue = $("select");
     let currencyCode;
-
+    
     var purchaseParity = selectValue.children("option:selected").val()
+    
+    
 
     if (selectValue.children("option:selected").val() === "CA") {
         currencyCode = "CAD";
@@ -33,8 +35,14 @@ $("#convert").on("click", function () {
         currencyCode = "GBP"
         purchaseParity = "GB"
     }
-    cCardPanel.style.visibility = "visible";
-    pCardPanel.style.visibility = "visible";
+
+    
+    cCardPanel.show()
+    pCardPanel.show()
+    
+    
+
+     
     console.log(currencyCode)
 
 
@@ -61,7 +69,7 @@ function convertCurrency(currency) {
 
             let inputDollar = Number($("#textarea1").val().trim());
             let product = (inputDollar * result).toFixed(2);
-
+            $("#product").text("");
             $("#product").text(product)
         })
 }
@@ -78,7 +86,10 @@ function purchasePower(target) {
             console.log(pppConversion);
 
             pCardPanel = $("#pCardPanel")
+            pCardPanel.empty()
+            
             for (let i = 0; i < objects.length; i++) {
+                
                 var product = (prices[i] * pppConversion).toFixed(2)
                 var para = $("<p>").attr("class", "object_list")
                 para.text(objects[i] + " = $" + product)
