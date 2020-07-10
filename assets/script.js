@@ -47,6 +47,17 @@ function convertCurrency(currency) {
         .then((response) => {
             console.log(response);
            
-            let result = response.data.USD_MXN.val
+            if (currency === "MXN"){
+                let result = response.data.USD_MXN.val
+                console.log(result);
+            }
+            else if (currency === "CAN") {
+                let result = response.data.USD_CAN.val
+                console.log(result);
+            }
+            else if (currency === "GBP") {
+                let result = response.data.USD_GBP.val
+                console.log(result);
+            }
         })
 }
