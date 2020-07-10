@@ -131,3 +131,7 @@ footer {
 .btn:hover {
   background-color: #687554;
 }
+
+ul.dropdown-content li span {
+  color: black;
+}
