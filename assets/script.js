@@ -22,7 +22,11 @@ $("#convert").on("click", function () {
     else if (selectValue.children("option:selected").val() === "MX") {
         currencyCode = "MXN"
     }
+<<<<<<< HEAD
     else if (selectValue.children("option:selected").val()==="UK") {
+=======
+    else if (selectValue.children("option:selected").val() === "UK") {
+>>>>>>> 71fca7c3134167103a76bc406fc9d77a2f919ee4
         currencyCode = "GBP"
     }
 
@@ -37,12 +41,19 @@ $("#convert").on("click", function () {
             console.log(response);
 
             PPP = response.data.ppp.ppp;
+<<<<<<< HEAD
             
 
             pppConversion = response.data.ppp.pppConversionFactor
             
         }
 
+=======
+
+            pppConversion = response.data.ppp.pppConversionFactor
+        })
+})
+>>>>>>> 71fca7c3134167103a76bc406fc9d77a2f919ee4
 
 function convertCurrency(currency) {
     axios.get("https://free.currconv.com/api/v7/convert?apiKey=" + apiKey2 + "&q=USD_" + currency + "&compact=y")
