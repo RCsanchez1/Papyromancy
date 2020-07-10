@@ -51,8 +51,8 @@ function convertCurrency(currency) {
                 let result = response.data.USD_MXN.val
                 console.log(result);
             }
-            else if (currency === "CAN") {
-                let result = response.data.USD_CAN.val
+            else if (currency === "CAD") {
+                let result = response.data.USD_CAD.val
                 console.log(result);
             }
             else if (currency === "GBP") {
@@ -62,7 +62,9 @@ function convertCurrency(currency) {
 
 
             let inputDollar = Number($("#textarea1").val().trim());
-            console.log(inputDollar);
+            
 
+            let product = inputDollar * result;
+            console.log(product);
         })
 }
