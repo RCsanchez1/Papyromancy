@@ -34,18 +34,10 @@ $("#convert").on("click", function () {
     pCardPanel.style.visibility = "visible";
     console.log(currencyCode)
 
+    var purchaseParity = selectValue.children("option:selected").val()
     convertCurrency(currencyCode);
-    // purchasePower();
+    purchasePower(purchaseParity);
 
-    //REVISE TARGET TO BE VARIABLE
-    axios.get("https://api.purchasing-power-parity.com/?target=CA&appid=" + apiKey)
-        .then((response) => {
-            console.log(response);
-
-            PPP = response.data.ppp.ppp;
-
-            pppConversion = response.data.ppp.pppConversionFactor
-        })
 })
 
 function convertCurrency(currency) {
@@ -56,24 +48,28 @@ function convertCurrency(currency) {
             // following statements ensure info is pulled correctly.
             if (currency === "MXN") {
                 result = response.data.USD_MXN.val
-                console.log(result);
             }
             else if (currency === "CAD") {
                  result = response.data.USD_CAD.val
-                console.log(result);
             }
             else if (currency === "GBP") {
                 result = response.data.USD_GBP.val
-                console.log(result);
             }
 
-
             let inputDollar = Number($("#textarea1").val().trim());
-            
-
             let product = (inputDollar * result).toFixed(2);
-            console.log(product);
 
             $("#product").text(product)
         })
+}
+
+function purchasePower(target) {
+    //REVISE TARGET TO BE VARIABLE
+    axios.get("https://api.purchasing-power-parity.com/?target="+ target +"&appid=" + apiKey)
+    .then((response) => {
+        console.log(response);
+
+        pppConversion = response.data.ppp.pppConversionFactor
+        console.log(pppConversion);
+    })
 }
