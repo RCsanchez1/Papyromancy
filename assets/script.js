@@ -5,11 +5,16 @@ const apiKey2 = '00b641aadb7d3614e166';
 let PPP;
 let pppConversion;
 
+var cCardPanel = document.getElementById("cCardPanel");
+var pCardPanel = document.getElementById("pCardPanel")
+
 
 $(document).ready(function () {
     $('select').formSelect();
 
 });
+cCardPanel.style.visibility = "hidden";
+pCardPanel.style.visibility = "hidden";
 
 
 $("#convert").on("click", function () {
@@ -25,7 +30,8 @@ $("#convert").on("click", function () {
     else if (selectValue.children("option:selected").val() === "UK") {
         currencyCode = "GBP"
     }
-
+    cCardPanel.style.visibility = "visible";
+    pCardPanel.style.visibility = "visible";
     console.log(currencyCode)
 
     convertCurrency(currencyCode);
@@ -46,8 +52,8 @@ function convertCurrency(currency) {
     axios.get("https://free.currconv.com/api/v7/convert?apiKey=" + apiKey2 + "&q=USD_" + currency + "&compact=y")
         .then((response) => {
             console.log(response);
-           // following statements ensure info is pulled correctly.
-            if (currency === "MXN"){
+            // following statements ensure info is pulled correctly.
+            if (currency === "MXN") {
                 let result = response.data.USD_MXN.val
                 console.log(result);
             }
