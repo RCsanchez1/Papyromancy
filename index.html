@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="assets/style.css">
+  <!-- Added favicon link-->
+  <link rel="shortcut icon" type="image/png" href="images/favicon.PNG">
 </head>
 
 
@@ -20,9 +22,11 @@
     <nav class="headerColor" role="navigation">
       <div class="nav-wrapper">
         <a id="logo-container" src="images/logo.PNG" href="index.html" class="left brand-logo" alt="logo">
-          <img src="images/logo.PNG" width="245" height="60"></a>
+          <img src="images/logo.PNG" width="245" height="55"></a>
         <ul class="right">
-          <li><a href="howto.html">How To</a></li>
+
+          <li><a class="waves-effect waves-light btn" href="howto.html">How to</a></li>
+          <!-- <li><a href="howto.html">How To</a></li> -->
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
@@ -58,20 +62,21 @@
               <option value="MX" data-icon="images/mexico.png" class="left">Mexico (MXN)</option>
               <option value="UK" data-icon="images/uk.png" class="left">UK (GBP)</option>
             </select>
-            <label>Images in select</label>
+            <!-- <label>Images in select</label> -->
           </div>
 
         </div>
         <div class="row">
           <div class="col s12">
-            <button id="convert">click here to convert</button>
+            <a class="waves-effect waves-light btn"><i class="material-icons left">money</i>Convert</a>
+            <!--<button id="convert">click here to convert</button>-->
           </div>
 
           <div class="row">
             <form class="col s12">
               <div class="col s12 card-panel">
                 <div id="currencyOutput">
-                  <p>Currency conversion goes here</p>
+                  <p>Currency Conversion goes here</p>
                 </div>
               </div>
             </form>
@@ -81,7 +86,7 @@
       <div class="container">
         <div class="row">
           <div class="col s12 card-panel">
-            <p>purchasing power parity goes here</p>
+            <p>Purchasing Power Parity goes here</p>
           </div>
         </div>
 
@@ -91,7 +96,7 @@
 
   <footer>
     <p>©Copywrite
-      <a>Author: Group 5</a></p>
+      <a>Discord Group 5</a></p>
   </footer>
 
   <!-- Optional JavaScript -->
