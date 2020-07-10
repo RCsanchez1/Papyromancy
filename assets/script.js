@@ -50,7 +50,7 @@ function convertCurrency(currency) {
                 result = response.data.USD_MXN.val
             }
             else if (currency === "CAD") {
-                 result = response.data.USD_CAD.val
+                result = response.data.USD_CAD.val
             }
             else if (currency === "GBP") {
                 result = response.data.USD_GBP.val
@@ -65,21 +65,21 @@ function convertCurrency(currency) {
 
 function purchasePower(target) {
     //REVISE TARGET TO BE VARIABLE
-    axios.get("https://api.purchasing-power-parity.com/?target="+ target +"&appid=" + apiKey)
-    .then((response) => {
-        console.log(response);
-        var objects = ["Milk", "Movie Ticket", "Bus Ticket"]
-        var prices = [3, 9, 1.5]
+    axios.get("https://api.purchasing-power-parity.com/?target=" + target + "&appid=" + apiKey)
+        .then((response) => {
+            console.log(response);
+            var objects = ["Milk", "Loaf of Bread", "Dozen of Eggs", "Average Dinner Out", "Average Cost of Food per Day", "Movie Ticket", "Bus Ticket",]
+            var prices = [3, 2.5, 2, 17, 42, 9, 1.5]
 
-        pppConversion = response.data.ppp.pppConversionFactor
-        console.log(pppConversion);
+            pppConversion = response.data.ppp.pppConversionFactor
+            console.log(pppConversion);
 
-        pCardPanel = $("#pCardPanel")
-        for (let i = 0; i < objects.length; i++) {
-            var product = (prices[i] * pppConversion).toFixed(2)
-            var para = $("<p>").attr("class","object_list")
-            para.text(objects[i] + " = " + product)
-            pCardPanel.append(para)
-        }
-    })
+            pCardPanel = $("#pCardPanel")
+            for (let i = 0; i < objects.length; i++) {
+                var product = (prices[i] * pppConversion).toFixed(2)
+                var para = $("<p>").attr("class", "object_list")
+                para.text(objects[i] + " = $" + product)
+                pCardPanel.append(para)
+            }
+        })
 }
