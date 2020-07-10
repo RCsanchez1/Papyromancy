@@ -70,7 +70,7 @@ function convertCurrency(currency) {
             let inputDollar = Number($("#textarea1").val().trim());
             let product = (inputDollar * result).toFixed(2);
 
-            
+
             $("#product").text("");
 
             if (currency === "MXN") {
@@ -100,16 +100,16 @@ function purchasePower(target) {
             pCardPanel.empty()
 
             for (let i = 0; i < objects.length; i++) {
-                
+
 
                 var product = (prices[i] * pppConversion).toFixed(2)
                 var para = $("<p>").attr("class", "object_list")
                 para.text(objects[i] + " = $" + product)
-                
+
                 pCardPanel.append(para);
-                
+
             }
-            let h5 = $("<h5>").text("Purchase Power Parity");
+            let h5 = $("<h5>").text("Purchasing Power Parity");
             pCardPanel.prepend(h5);
         })
 }
