@@ -20,10 +20,10 @@ pCardPanel.hide()
 $("#convert").on("click", function () {
     let selectValue = $("select");
     let currencyCode;
-    
+
     var purchaseParity = selectValue.children("option:selected").val()
-    
-    
+
+
 
     if (selectValue.children("option:selected").val() === "CA") {
         currencyCode = "CAD";
@@ -36,13 +36,13 @@ $("#convert").on("click", function () {
         purchaseParity = "GB"
     }
 
-    
+
     cCardPanel.show()
     pCardPanel.show()
-    
-    
 
-     
+
+
+
     console.log(currencyCode)
 
 
@@ -69,8 +69,18 @@ function convertCurrency(currency) {
 
             let inputDollar = Number($("#textarea1").val().trim());
             let product = (inputDollar * result).toFixed(2);
+
             $("#product").text("");
-            $("#product").text(product)
+
+            if (currency === "MXN") {
+                $("#product").text("$" + product)
+            }
+            else if (currency === "CAD") {
+                $("#product").text("$" + product)
+            }
+            else if (currency === "GBP") {
+                $("#product").text("£" + product)
+            }
         })
 }
 
@@ -87,9 +97,9 @@ function purchasePower(target) {
 
             pCardPanel = $("#pCardPanel")
             pCardPanel.empty()
-            
+
             for (let i = 0; i < objects.length; i++) {
-                
+
                 var product = (prices[i] * pppConversion).toFixed(2)
                 var para = $("<p>").attr("class", "object_list")
                 para.text(objects[i] + " = $" + product)
