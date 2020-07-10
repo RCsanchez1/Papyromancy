@@ -124,3 +124,14 @@ footer {
 ul.dropdown-content li span {
   color: black;
 }
+
+#product {
+  height: 40px;
+  color: white;
+  font-size: 50px;
+}
+
+#cCardPanel {
+  height: 100px;
+  padding: 35px;
+}
