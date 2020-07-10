@@ -52,17 +52,18 @@ function convertCurrency(currency) {
     axios.get("https://free.currconv.com/api/v7/convert?apiKey=" + apiKey2 + "&q=USD_" + currency + "&compact=y")
         .then((response) => {
             console.log(response);
+            let result;
             // following statements ensure info is pulled correctly.
             if (currency === "MXN") {
-                let result = response.data.USD_MXN.val
+                result = response.data.USD_MXN.val
                 console.log(result);
             }
             else if (currency === "CAD") {
-                let result = response.data.USD_CAD.val
+                 result = response.data.USD_CAD.val
                 console.log(result);
             }
             else if (currency === "GBP") {
-                let result = response.data.USD_GBP.val
+                result = response.data.USD_GBP.val
                 console.log(result);
             }
 
@@ -70,7 +71,9 @@ function convertCurrency(currency) {
             let inputDollar = Number($("#textarea1").val().trim());
             
 
-            let product = inputDollar * result;
+            let product = (inputDollar * result).toFixed(2);
             console.log(product);
+
+            $("#product").text(product)
         })
 }
