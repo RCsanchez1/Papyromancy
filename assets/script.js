@@ -46,7 +46,7 @@ function convertCurrency(currency) {
     axios.get("https://free.currconv.com/api/v7/convert?apiKey=" + apiKey2 + "&q=USD_" + currency + "&compact=y")
         .then((response) => {
             console.log(response);
-           
+           // following statements ensure info is pulled correctly.
             if (currency === "MXN"){
                 let result = response.data.USD_MXN.val
                 console.log(result);
@@ -59,5 +59,10 @@ function convertCurrency(currency) {
                 let result = response.data.USD_GBP.val
                 console.log(result);
             }
+
+
+            let inputDollar = Number($("#textarea1").val().trim());
+            console.log(inputDollar);
+
         })
 }
