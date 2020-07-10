@@ -21,6 +21,8 @@ $("#convert").on("click", function () {
     let selectValue = $("select");
     let currencyCode;
 
+    var purchaseParity = selectValue.children("option:selected").val()
+
     if (selectValue.children("option:selected").val() === "CA") {
         currencyCode = "CAD";
     }
@@ -29,12 +31,13 @@ $("#convert").on("click", function () {
     }
     else if (selectValue.children("option:selected").val() === "UK") {
         currencyCode = "GBP"
+        purchaseParity = "GB"
     }
     cCardPanel.style.visibility = "visible";
     pCardPanel.style.visibility = "visible";
     console.log(currencyCode)
 
-    var purchaseParity = selectValue.children("option:selected").val()
+
     convertCurrency(currencyCode);
     purchasePower(purchaseParity);
 
