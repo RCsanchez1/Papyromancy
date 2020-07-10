@@ -128,10 +128,10 @@ ul.dropdown-content li span {
 #product {
   height: 40px;
   color: white;
-  font-size: 50px;
+  font-size: 25px;
 }
 
 #cCardPanel {
-  height: 100px;
+  
   padding: 35px;
 }
