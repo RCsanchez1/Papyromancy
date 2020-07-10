@@ -113,17 +113,6 @@ footer {
   float: left;
 }
 
-#convert {
-  display: block;
-  background-color: white;
-  color: black;
-} 
-
- #convert:hover {
-  background-color: black;
-  color: white; 
-}
-
 .btn {
   background-color: #a3a793 ;
 }
