@@ -46,5 +46,7 @@ function convertCurrency(currency) {
     axios.get("https://free.currconv.com/api/v7/convert?apiKey=" + apiKey2 + "&q=USD_" + currency + "&compact=y")
         .then((response) => {
             console.log(response);
+           
+            let result = response.data.USD_MXN.val
         })
 }
