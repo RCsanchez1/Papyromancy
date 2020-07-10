@@ -68,8 +68,18 @@ function purchasePower(target) {
     axios.get("https://api.purchasing-power-parity.com/?target="+ target +"&appid=" + apiKey)
     .then((response) => {
         console.log(response);
+        var objects = ["Milk", "Movie Ticket", "Bus Ticket"]
+        var prices = [3, 9, 1.5]
 
         pppConversion = response.data.ppp.pppConversionFactor
         console.log(pppConversion);
+
+        pCardPanel = $("#pCardPanel")
+        for (let i = 0; i < objects.length; i++) {
+            var product = (prices[i] * pppConversion).toFixed(2)
+            var para = $("<p>").attr("class","object_list")
+            para.text(objects[i] + " = " + product)
+            pCardPanel.append(para)
+        }
     })
 }
