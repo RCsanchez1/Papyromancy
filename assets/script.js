@@ -83,6 +83,10 @@ function convertCurrency(currency) {
                 $("#product").text("£" + product)
             }
         })
+        .catch((error) => {
+            console.log(error)
+            $("#product").text("It appears that the Currency Conversion API is not currently working. Try again later!")
+        })
 }
 
 function purchasePower(target) {
