@@ -22,7 +22,7 @@ We used 2 server side API's in our app.  A **[currency converter API](https://fr
 API](https://purchasing-power-parity.com/)**.  For the base framework and design of our app we used **[Materialize](https://materializecss.com/)**. To call the API's in our code we used **[Axios](https://www.npmjs.com/package/axios)**.
 
 ## Future Development
-We plan to continue working on this project and add currency exchange locations, directions, and ratings to each establishment.  We will also add more currency and country options to convert from USD.  We'll add the option to convert from other currencies other than USD.  
+We plan to continue working on this project, and add currency exchange locations, directions, and ratings to each establishment using a map API.  We will also add more currency and country options to convert from USD.  We'll add the option to convert from other currencies other than USD. We hope to be able to provide data that will help the user find the most reputible currency exchange locations, so that they can have more cash for their trip. There are so many different rates that some of these currency exchange buisinesses will give. We are trying to eliminate the bad locations with help from reviews, and research on more relevant data.
 
 <img alt="Homepage" src="images/homescreen.png" width="500">
 <img alt="Conversion" src="images/conversion.png" width="500">
