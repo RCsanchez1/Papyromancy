@@ -1,4 +1,4 @@
-# [Papyromancy](
+# [Papyromancy](https://dylandewey.github.io/Papyromancy/)
 **Papyromancy:** A way of divination through folding paper. Some say a true papyromancer can crumple up any piece of paper, unfold it, and predict the future from the creased lines
 reading the creased paper the way that a palm reader would read a person's palm.
 -Wikipedia
